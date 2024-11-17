@@ -1,3 +1,4 @@
+*/* Reset and General Styling */
 * {
    margin: 0;
    padding: 0;
@@ -19,8 +20,9 @@ body {
    position: absolute;
    width: 100px;
    top: 20px;
-   left: 20px;
-   font-size: 40px;
+   margin-left: 70px;
+   font-size: 50px;
+   font-weight: 900;
    cursor: pointer;
    z-index: 10;
    color: #0A1A2D;
@@ -30,38 +32,6 @@ body {
 .hamburger.active {
    color: #ffffff;
    transform: scale(1.2);
-}
-
-/* Resume Icon Styling (Positioned Bottom-Right) */
-.resume-icon {
-   position: absolute;
-   bottom: 20px;
-   right: 20px;
-   background-color: #0A1A2D;
-   color: #fff;
-   padding: 10px 20px;
-   border-radius: 5px;
-   font-size: 18px;
-   text-align: center;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   transition: background-color 0.3s ease;
-}
-
-.resume-icon a {
-   color: #fff;
-   text-decoration: none;
-   display: flex;
-   align-items: center;
-}
-
-.resume-icon a i {
-   margin-right: 8px;
-}
-
-.resume-icon:hover {
-   background-color: #D6AF4C; 
 }
 
 /* Sidebar Styling */
@@ -80,7 +50,6 @@ body {
    z-index: 5;
 }
 
-/* Avatar Section */
 .sidebar-avatar {
    margin-bottom: 30px;
    position: relative;
@@ -122,7 +91,6 @@ body {
    margin-left: 10px;
 }
 
-
 #sidebar li a::after {
    content: '';
    display: block;
@@ -133,16 +101,14 @@ body {
    opacity: 0.5;
 }
 
-
 #sidebar li a:hover {
    color: #D6AF4C;
    transform: translateX(13px);
 }
 
-
 /* Sidebar Footer Styling */
 .sidebar-footer {
-   margin-top: auto; 
+   margin-top: auto;
    width: 100%;
    text-align: center;
    color: #fff;
@@ -163,11 +129,190 @@ body {
    color: #D6AF4C;
 }
 
+/* Resume Icon Styling */
+.resume-icon {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: #0A1A2D;
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   font-size: 18px;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background-color 0.3s ease;
+}
+
+.resume-icon a {
+   color: #fff;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+}
+
+.resume-icon a i {
+   margin-right: 8px;
+}
+
+.resume-icon:hover {
+   background-color: #D6AF4C;
+}
+
+/* Social Icons Styling */
+.social-icons {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+
+.social-icons a {
+   color: #0A1A2D;
+   font-size: 24px;
+   margin: 0 10px;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+   color: #D6AF4C;
+   transform: scale(1.2);
+}
+
+/* Center Content Styling */
+.center-content {
+   text-align: center;
+}
+
+.avatar img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 5px solid #D6AF4C;
+   margin-bottom: 20px;
+   animation: popIn 1.5s ease;
+}
+
+h1 {
+   font-size: 32px;
+   color: #0A1A2D;
+}
+
+h1, p, .social-icons {
+   padding: 9px;
+}
+
+.social-icons a {
+   padding: 10px;
+}
+
+/* Text Container */
+.text-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+/* Animated Text */
+.animated-text {
+   font-size: clamp(16px, 2vw, 24px);
+   color: #0A1A2D;
+   margin-top: 10px;
+   margin-left: 10vw;
+   letter-spacing: 2px;
+   font-weight: bold;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 2px solid #D6AF4C;
+   width: 18ch;
+   text-align: center;
+   animation: typing 3.5s steps(18, end), blink 0.7s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+   from { width: 0; }
+   to { width: 18ch; }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+   from { border-right-color: transparent; }
+   to { border-right-color: #D6AF4C; }
+}
+
+/* Responsive Design */
+/* Screens up to 1200px */
+@media (max-width: 1200px) {
+   .hamburger {
+      font-size: 35px;
+      left: 10px;
+   }
+
+   #sidebar {
+      width: 200px;
+   }
+
+   #sidebar li a {
+      font-size: 16px;
+   }
+
+   .resume-icon {
+      padding: 8px 15px;
+      font-size: 25px;
+   }
+}
+
+/* Screens up to 992px */
+@media (max-width: 992px) {
+   .hamburger {
+      font-size: 30px;
+   }
+
+   #sidebar {
+      width: 180px;
+   }
+
+   .resume-icon {
+      padding: 6px 12px;
+   }
+}
+
+/* Screens up to 768px */
+@media (max-width: 768px) {
+   .animated-text {
+      font-size: 14px;
+      margin-left: 5%;
+   }
+}
+
+/* Screens up to 576px */
+@media (max-width: 576px) {
+   .resume-icon {
+      font-size: 20px;
+   }
+}
+
+/* Screens up to 480px */
+@media (max-width: 480px) {
+   .resume-icon {
+      font-size: 18px;
+   }
+}
 
 
 
 
 
+
+
+
+
+
+
+ /*/////////////////////////////MAIN
 /* Social Icons Styling */
 .social-icons {
    margin-top: 20px;
@@ -281,14 +426,6 @@ padding: 10px;
 #sidebar.active {
    left: 0;
 }
-
-
-.hamburger {
-   position: absolute;
-   top: 30px;
-   left: 20px;
-}
-
 .sidebar-avatar {
    position: absolute;
    top: 100px; 
@@ -296,24 +433,18 @@ padding: 10px;
 
 
 
-
-
-
-
-/* Project Cards Container Styling */
+/* Project Cards  Styling */
 .projects-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust to screen size */
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
    gap: 20px;
    padding: 40px;
    max-width: 1200px;
    width: 100%;
-   max-height: 80vh; /* Ensure proper scrolling for overflow content */
+   max-height: 80vh; 
    overflow-y: auto;
-   margin: 0 auto; /* Center container */
+   margin: 0 auto;
 }
-
-/* Individual Project Card */
 .project-card {
    background: #ffffff;
    border-radius: 10px;
@@ -322,25 +453,20 @@ padding: 10px;
    text-align: center;
    padding: 20px;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
-   position: relative; /* For button positioning */
+   position: relative; 
 }
-
 .project-card img {
    width: 100%;
-   height: 180px; /* Consistent height for images */
+   height: 180px;
    border-radius: 10px;
-   object-fit: cover; /* Ensures consistent aspect ratio */
+   object-fit: cover;
 }
-
-/* Card Title */
 .project-card h3 {
    margin-top: 15px;
    color: #0A1A2D;
    font-size: 20px;
    font-weight: bold;
 }
-
-/* View Button */
 .view-button {
    display: inline-block;
    margin-top: 15px;
@@ -353,19 +479,15 @@ padding: 10px;
    font-size: 16px;
    transition: background-color 0.3s, transform 0.3s;
 }
-
 .view-button:hover {
    background-color: #b28f39;
    transform: translateY(-3px); 
    box-shadow: 0 3px 15px #0A1A2D;
 }
-
-/* Hover Effect for Project Card */
 .project-card:hover {
    transform: translateY(-10px);
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
    .project-card img {
@@ -423,13 +545,11 @@ padding: 10px;
    margin: 20px auto; 
    width: 90%; 
 }
-
 h1 {
    font-size: 36px;
    color: #0A1A2D;
    margin-bottom: 20px;
 }
-
 .resume-details p {
    padding: 20px;
    font-size: 18px;
@@ -437,7 +557,6 @@ h1 {
    line-height: 1.6; 
    color: #333; 
 }
-
 .download-btn {
    display: inline-block;
    background-color: #D6AF4C;
@@ -449,13 +568,11 @@ h1 {
    transition: background-color 0.3s, transform 0.3s;
    box-shadow: 0 2px 5px #0A1A2D;
 }
-
 .download-btn:hover {
    background-color: #0A1A2D;
    box-shadow: 0 2px 10px #D6AF4C; 
    transform: scale(1.05); 
 }
-
 /* Responsive Styling */
 @media (max-width: 768px) {
    .center-container {
@@ -522,13 +639,11 @@ h1 {
    margin: 20px auto; 
    width: 90%; 
 }
-
 .contact-container h2 {
    font-size: 24px;
    color: #0A1A2D;
    margin-bottom: 20px;
 }
-
 .contact-info {
    padding: 20px;
    display: flex;
@@ -536,7 +651,6 @@ h1 {
    gap: 15px;
    align-items: center;
 }
-
 .contact-item {
    display: flex;
    align-items: center;
@@ -550,64 +664,52 @@ h1 {
    max-width: 400px; 
    transition: transform 0.3s, background-color 0.3s;
 }
-
 .contact-item:hover {
    transform: scale(1.05);
    background-color: #fff8e1;
 }
-
 .contact-item i {
    font-size: 24px;
    margin-right: 10px;
    color: #D6AF4C;
 }
-
 .contact-item a {
    color: #0A1A2D;
    text-decoration: none;
    transition: color 0.3s;
 }
-
 .contact-item a:hover {
    color: #D6AF4C;
 }
-
 /* Responsive Styling */
 @media (max-width: 768px) {
    .contact-container {
       padding: 30px;
    }
-
    .contact-container h2 {
       font-size: 20px;
    }
-
    .contact-item {
       font-size: 16px;
       padding: 8px 10px;
    }
-
    .contact-item i {
       font-size: 20px;
    }
 }
-
 @media (max-width: 576px) {
    .contact-container {
       padding: 20px;
    }
-
    .contact-container h2 {
       font-size: 18px;
    }
-
    .contact-item {
       flex-direction: column; 
       gap: 10px;
       font-size: 14px;
       padding: 8px;
    }
-
    .contact-item i {
       font-size: 18px;
    }
@@ -654,7 +756,6 @@ h1 {
    margin: 20px auto;
    width: 90%; 
 }
-
 .avatar img {
    width: 100px;
    height: 100px;
@@ -662,21 +763,17 @@ h1 {
    border: 3px solid #D6AF4C;
    margin-bottom: 20px;
 }
-
 h1 {
    font-size: 36px;
    color: #0A1A2D;
    margin-bottom: 20px;
 }
-
-/* Skills List Styling */
 .skills-list {
    display: flex;
    flex-wrap: wrap;
    gap: 20px;
    justify-content: center;
 }
-
 .skill-item {
    display: flex;
    align-items: center;
@@ -689,55 +786,44 @@ h1 {
    box-shadow: 0 2px 5px #0A1A2D;
    transition: transform 0.3s;
 }
-
 .skill-item:hover {
    transform: scale(1.05);
 }
-
 .skill-item i {
    font-size: 24px;
    color: #D6AF4C;
 }
-
 /* Responsive Styling */
 @media (max-width: 768px) {
    h1 {
       font-size: 28px;
    }
-
    .skills-list {
       gap: 15px;
    }
-
    .skill-item {
       font-size: 16px;
       padding: 8px 15px;
    }
-
    .skill-item i {
       font-size: 20px;
    }
 }
-
 @media (max-width: 576px) {
    .center-container {
       padding: 15px;
    }
-
    h1 {
       font-size: 24px;
    }
-
    .skills-list {
       flex-direction: column;
       gap: 10px;
    }
-
    .skill-item {
       font-size: 14px;
       padding: 8px 10px;
    }
-
    .skill-item i {
       font-size: 18px;
    }
@@ -746,111 +832,82 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-/* ///////////////////////////Dark/Light Mode Toggle Icon */
+/* ///////////////// Dark/Light Mode Toggle Icon */
 .top-right-icons {
    position: absolute;
-   top: 25px;
+   top: 20px;
    right: 45px;
    font-size: 40px;
    cursor: pointer;
    color: #0A1A2D;
    transition: color 0.3s ease;
 }
-
 .top-right-icons .mode-toggle:hover {
    color: #D6AF4C;
 }
-
-
 body.dark-mode {
-   background-color: #0A1A2D; 
    color: #ffffff; 
 }
-
 /* Sidebar for Dark Mode */
 body.dark-mode #sidebar {
-   background: #0A1A2D; 
+   background: #2b2b2b; 
 }
-
 body.dark-mode #sidebar a {
    color: #ffffff; 
 }
-
 body.dark-mode #sidebar a:hover {
    color: #D6AF4C; 
 }
-
 body.dark-mode #sidebar li a {
    color: #ffffff;
 }
-
 body.dark-mode h1,
 body.dark-mode p {
    color: #ffffff; 
 }
-
 body.dark-mode .hamburger {
    color: #ffffff; 
 }
-
 body.dark-mode .hamburger:hover {
    color: #D6AF4C; 
 }
-
 body.dark-mode .resume-icon {
+   background-color: #D6AF4C;
    color: #ffffff; 
 }
-
 body.dark-mode .resume-icon a {
    color: #ffffff;
 }
-
 body.dark-mode .top-right-icons .mode-toggle i {
    color: #ffffff; 
 }
-
 /* Dark Mode Text for Specific Sections */
 body.dark-mode .resume-icon a,
 body.dark-mode .social-icons a,
 body.dark-mode .sidebar a {
    color: #ffffff; 
 }
-
 body.dark-mode .resume-icon a:hover,
 body.dark-mode .social-icons a:hover {
-   color: #D6AF4C; 
+   color: #D6AF4C;
+   color: white; 
 }
-
-/*///////////////// Home page specific styles for icons */
+/*///////////////// Home page */
 body.dark-mode .hamburger,
 body.dark-mode .sidebar-avatar img,
 body.dark-mode .social-icons a {
    color: #ffffff;
 }
-
-
 body.dark-mode .social-icons a i {
    color: #ffffff;
 }
-
-body.dark-mode .social-icons a:hover {
+body.dark-mode .social-icons a i:hover {
    color: #D6AF4C; 
 }
-
-
 body.dark-mode .skills a,
 body.dark-mode .contact a {
    color: #ffffff;
 }
-
 body.dark-mode .skills a:hover,
 body.dark-mode .contact a:hover {
    color: #D6AF4C;
@@ -858,242 +915,37 @@ body.dark-mode .contact a:hover {
 body.dark-mode .contact-container h1 {
    color: #0a0a0a; 
 }
-
-
-
-
-
-
-
-
-/* Dark Mode Styles for Resume Page */
+/* Dark Mode Styles for contact resume skills project Page */
 body.dark-mode {
-   background-color: #0A1A2D; /* Dark background */
-   color: #ffffff; /* White text */
+   background-color: #000307; 
+   color: #ffffff; 
 }
-
-body.dark-mode .center-container {
-   color: #ffffff; /* Ensure all text in the resume content is white */
+body.dark-mode .center-container,
+body.dark-mode .contact-container,
+body.dark-mode .project-card {
+   background-color: #333;
+   color: #ffffff;
 }
-
-body.dark-mode .center-container h1 {
-   color: #0a0a0a; /* Set the heading text color to yellowish */
+body.dark-mode .center-container h1,
+body.dark-mode .contact-container h1  {
+   color: #D6AF4C; /
 }
-
-
 body.dark-mode .resume-details p {
-   color: #000000; /* Make resume details text white */
+   color: #ffffff; 
 }
-
 body.dark-mode .download-btn {
-   background-color: #D6AF4C; /* Button background color */
-   color: #ffffff; /* White text on button */
+   background-color: #D6AF4C; 
+   color: #ffffff;
    border: none;
    padding: 10px 20px;
    text-decoration: none;
    border-radius: 5px;
    font-size: 16px;
 }
-
-body.dark-mode .download-btn:hover {
-   background-color: #B69234; /* Darker shade on hover */
+body.dark-mode .download-btn:hover
+{
+   background-color: #B69234; 
 }
-                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ///////////////////////////////Responsive Styles */
-@media (max-width: 1200px) {
-   .hamburger {
-      font-size: 35px;
-      left: 15px;
-   }
-
-   #sidebar {
-      width: 200px;
-   }
-
-   #sidebar li a {
-      font-size: 16px;
-   }
-
-   .sidebar-avatar img {
-      width: 60px;
-      height: 60px;
-   }
-
-   .resume-icon {
-      padding: 8px 15px;
-      font-size: 16px;
-   }
-
-   .resume-icon:hover {
-      background-color: #D6AF4C;
-   }
-}
-
-@media (max-width: 992px) {
-   .hamburger {
-      font-size: 30px;
-   }
-
-   #sidebar {
-      width: 180px;
-   }
-
-   #sidebar li a {
-      font-size: 14px;
-   }
-
-   .sidebar-avatar img {
-      width: 50px;
-      height: 50px;
-   }
-
-   .resume-icon {
-      padding: 6px 12px;
-      font-size: 14px;
-   }
-}
-
-@media (max-width: 768px) {
-   .hamburger {
-      font-size: 25px;
-      top: 15px;
-   }
-
-   #sidebar {
-      width: 160px;
-      padding-top: 20px;
-   }
-
-   #sidebar li a {
-      font-size: 13px;
-   }
-
-   .sidebar-avatar img {
-      width: 45px;
-      height: 45px;
-   }
-
-   .resume-icon {
-      bottom: 15px;
-      right: 15px;
-      padding: 5px 10px;
-      font-size: 12px;
-   }
-
-   .center-content h1 {
-      font-size: 28px;
-   }
-
-   .center-content .avatar img {
-      width: 120px;
-      height: 120px;
-   }
-
-   .animated-text {
-      font-size: 16px;
-   }
-}
-
-@media (max-width: 576px) {
-   .hamburger {
-      font-size: 22px;
-      left: 10px;
-   }
-
-   #sidebar {
-      width: 140px;
-   }
-
-   #sidebar li a {
-      font-size: 12px;
-   }
-
-   .sidebar-avatar img {
-      width: 40px;
-      height: 40px;
-   }
-
-   .resume-icon {
-      padding: 4px 8px;
-      font-size: 10px;
-   }
-
-   .center-content h1 {
-      font-size: 24px;
-   }
-
-   .center-content .avatar img {
-      width: 100px;
-      height: 100px;
-   }
-
-   .animated-text {
-      font-size: 14px;
-   }
-}
-
-@media (max-width: 400px) {
-   #sidebar {
-      width: 120px;
-      font-size: 10px;
-   }
-
-   .sidebar-avatar img {
-      width: 35px;
-      height: 35px;
-   }
-
-   .resume-icon {
-      padding: 3px 6px;
-      font-size: 9px;
-   }
-
-   .center-content h1 {
-      font-size: 20px;
-   }
-
-   .center-content .avatar img {
-      width: 80px;
-      height: 80px;
-   }
-
-   .animated-text {
-      font-size: 12px;
-   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
