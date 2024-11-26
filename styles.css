@@ -725,31 +725,12 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Skills Page Styling */
 .center-container {
    background-color: white;
    padding: 20px;
    max-width: 500px;
+   max-height: 100vh; /* Restrict to screen height */
+   overflow-y: auto; /* Enable vertical scrolling */
    border-radius: 8px;
    box-shadow: 0 1px 10px #D6AF4C;
    text-align: center;
@@ -828,6 +809,38 @@ h1 {
       font-size: 18px;
    }
 }
+/* For Short Height Devices */
+@media (max-height: 600px) {
+   .center-container {
+      padding: 10px;
+   }
+   h1 {
+      font-size: 20px;
+   }
+   .skill-item {
+      font-size: 12px;
+      padding: 5px 8px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
