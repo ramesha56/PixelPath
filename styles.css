@@ -687,7 +687,7 @@ h1 {
       padding: 30px;
    }
    .contact-container h2 {
-      font-size: 20px;
+      font-size: 2px;
    }
    .contact-item {
       font-size: 16px;
@@ -699,19 +699,24 @@ h1 {
 }
 @media (max-width: 576px) {
    .contact-container {
-      padding: 20px;
+      padding: 20px; /* Adjust overall padding */
    }
    .contact-container h2 {
-      font-size: 18px;
+      font-size: 18px; /* Smaller font size for the heading */
+      margin-bottom: 10px; /* Reduce gap below the heading */
+   }
+   .contact-info {
+      padding: 10px; /* Reduce padding around the contact list */
+      gap: 10px; /* Decrease gap between contact items */
    }
    .contact-item {
-      flex-direction: column; 
-      gap: 10px;
-      font-size: 14px;
-      padding: 8px;
+      flex-direction: row; /* Ensure icons and text remain horizontal */
+      gap: 8px; /* Minimize space between icon and text */
+      font-size: 14px; /* Adjust font size */
+      padding: 8px; /* Tighten padding inside contact items */
    }
    .contact-item i {
-      font-size: 18px;
+      font-size: 16px; /* Reduce icon size */
    }
 }
 
@@ -725,12 +730,31 @@ h1 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Skills Page Styling */
 .center-container {
    background-color: white;
    padding: 20px;
    max-width: 500px;
-   max-height: 100vh; /* Restrict to screen height */
-   overflow-y: auto; /* Enable vertical scrolling */
    border-radius: 8px;
    box-shadow: 0 1px 10px #D6AF4C;
    text-align: center;
@@ -798,7 +822,8 @@ h1 {
       font-size: 24px;
    }
    .skills-list {
-      flex-direction: column;
+      display: grid; /* Change to grid layout */
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
       gap: 10px;
    }
    .skill-item {
@@ -809,37 +834,6 @@ h1 {
       font-size: 18px;
    }
 }
-/* For Short Height Devices */
-@media (max-height: 600px) {
-   .center-container {
-      padding: 10px;
-   }
-   h1 {
-      font-size: 20px;
-   }
-   .skill-item {
-      font-size: 12px;
-      padding: 5px 8px;
-   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
