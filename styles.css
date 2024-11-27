@@ -215,33 +215,34 @@ h1, p, .social-icons {
    height: 100vh;
 }
 
-/* Animated Text */
 .animated-text {
    font-size: clamp(16px, 2vw, 24px);
    color: #0A1A2D;
    margin-top: 10px;
-   margin-left: 10vw;
-   letter-spacing: 2px;
+   margin-left: 5vw;
+   letter-spacing: 1px;
    font-weight: bold;
    white-space: nowrap;
    overflow: hidden;
    border-right: 2px solid #D6AF4C;
-   width: 18ch;
+   width: 35ch; /* Width should match the longest text */
    text-align: center;
-   animation: typing 3.5s steps(18, end), blink 0.7s step-end infinite;
+   animation: typing 6s steps(60, end) infinite, blink 0.7s step-end infinite;
 }
 
 /* Typing Animation */
 @keyframes typing {
-   from { width: 0; }
-   to { width: 18ch; }
+   0% { width: 0; }          
+   50% { width: 35ch; }     
+   100% { width: 0; }        
 }
 
 /* Blinking Cursor */
 @keyframes blink {
-   from { border-right-color: transparent; }
-   to { border-right-color: #D6AF4C; }
+   0%, 50% { border-right-color: #D6AF4C; }
+   50%, 100% { border-right-color: transparent; }
 }
+
 
 /* Responsive Design */
 /* Screens up to 1200px */
@@ -280,13 +281,24 @@ h1, p, .social-icons {
    }
 }
 
-/* Screens up to 768px */
-@media (max-width: 768px) {
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
    .animated-text {
       font-size: 14px;
-      margin-left: 5%;
+      margin-left: 5%; 
+      letter-spacing: 1.5px; /
    }
 }
+
+@media screen and (max-width: 480px) {
+   .animated-text {
+      font-size: 12px; 
+      margin-left: 10%; /* Further adjust margin */
+      letter-spacing: 1px; 
+   }
+}
+
+
 
 /* Screens up to 576px */
 @media (max-width: 576px) {
@@ -363,54 +375,6 @@ padding: 10px;
    justify-content: center;
    align-items: center;
    height: 100vh;                             
-}
-
-
-
-
-/* Animated text styles */
-.animated-text {
-   font-size: clamp(16px, 2vw, 24px); 
-   color: #0A1A2D;
-   margin-top: 10px;
-   margin-left: 10vw; 
-   letter-spacing: 2px; 
-   font-weight: bold;
-   white-space: nowrap; 
-   overflow: hidden;
-   border-right: 2px solid #D6AF4C; 
-   width: 18ch; 
-   text-align: center; 
-   animation: typing 3.5s steps(18, end), blink 0.7s step-end infinite;
-}
-
-/* Typing animation */
-@keyframes typing {
-   from { width: 0; }
-   to { width: 18ch; }
-}
-
-/* Blinking cursor animation */
-@keyframes blink {
-   from { border-right-color: transparent; }
-   to { border-right-color: #D6AF4C; }
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-   .animated-text {
-      font-size: 14px;
-      margin-left: 5%; 
-      letter-spacing: 1.5px; /
-   }
-}
-
-@media screen and (max-width: 480px) {
-   .animated-text {
-      font-size: 12px; 
-      margin-left: 10%; /* Further adjust margin */
-      letter-spacing: 1px; 
-   }
 }
 
 
@@ -671,7 +635,7 @@ h1 {
 .contact-item i {
    font-size: 24px;
    margin-right: 10px;
-   color: #D6AF4C;
+
 }
 .contact-item a {
    color: #0A1A2D;
@@ -679,8 +643,22 @@ h1 {
    transition: color 0.3s;
 }
 .contact-item a:hover {
-   color: #D6AF4C;
+   color: #4c93d6;
 }
+/* Icon Color */
+.contact-item i.fa-square-whatsapp {
+   color: #25D366; 
+}
+.contact-item i.fa-envelope {
+   color: #D44638; 
+}
+.contact-item i.fa-linkedin {
+   color: #0A66C2; 
+}
+.contact-item i.fa-github {
+   color: #181717;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
    .contact-container {
@@ -798,6 +776,41 @@ h1 {
    font-size: 24px;
    color: #D6AF4C;
 }
+.skill-item i.fa-html5 {
+   color: #E34F26; 
+}
+.skill-item i.fa-css3-alt {
+   color: #1572B6; 
+}
+.skill-item i.fa-js {
+   color: #F7DF1E; 
+}
+.skill-item i.fa-react {
+   color: #61DAFB; 
+}
+.skill-item i.fa-bootstrap {
+   color: #7952B3; 
+}
+.skill-item i.fa-figma {
+   color: #F24E1E; 
+}
+.skill-item i.fa-github {
+   color: #181717; 
+}
+.skill-item i.fa-mobile-alt {
+   color: #02569B; 
+}
+.skill-item i.fa-palette {
+   color: #FF5733; 
+}
+.skill-item i.fa-paint-brush {
+   color: #6C757D; 
+}
+.skill-item i.fa-windows {
+   color: #00A4EF; 
+}
+
+
 /* Responsive Styling */
 @media (max-width: 768px) {
    h1 {
