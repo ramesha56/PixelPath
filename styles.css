@@ -161,26 +161,8 @@ body {
    background-color: #D6AF4C;
 }
 
-/* Social Icons Styling */
-.social-icons {
-   margin-top: 20px;
-   display: flex;
-   justify-content: center;
-}
 
-.social-icons a {
-   color: #0A1A2D;
-   font-size: 24px;
-   margin: 0 10px;
-   transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-   color: #D6AF4C;
-   transform: scale(1.2);
-}
-
-/* Center Content Styling */
+/* home */
 .center-content {
    text-align: center;
 }
@@ -193,6 +175,19 @@ body {
    margin-bottom: 20px;
    animation: popIn 1.5s ease;
 }
+@keyframes popIn {
+   0% { transform: scale(0.5); opacity: 0; }
+   100% { transform: scale(1); opacity: 1; }
+}
+
+#sidebar.active {
+   left: 0;
+}
+.sidebar-avatar {
+   position: absolute;
+   top: 100px; 
+}
+
 
 h1 {
    font-size: 32px;
@@ -243,6 +238,40 @@ h1, p, .social-icons {
    50%, 100% { border-right-color: transparent; }
 }
 
+/* Social Icons Styling */
+.social-icons {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+
+.social-icons a {
+   color: #0A1A2D;
+   font-size: 24px;
+   margin: 0 10px;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:nth-child(1) i {
+   color: #E1306C; /* Instagram Pink */
+}
+
+.social-icons a:nth-child(2) i {
+   color: #D44638; /* Gmail Red */
+}
+
+.social-icons a:nth-child(3) i {
+   color: #0077B5; /* LinkedIn Blue */
+}
+
+.social-icons a:nth-child(4) i {
+   color: #181717; /* GitHub Black */
+}
+
+.social-icons a:hover {
+  
+   transform: scale(1.2); 
+}
 
 /* Responsive Design */
 /* Screens up to 1200px */
@@ -293,7 +322,7 @@ h1, p, .social-icons {
 @media screen and (max-width: 480px) {
    .animated-text {
       font-size: 12px; 
-      margin-left: 10%; /* Further adjust margin */
+      margin-left: 10%; 
       letter-spacing: 1px; 
    }
 }
@@ -316,84 +345,6 @@ h1, p, .social-icons {
 
 
 
-
-
-
-
-
-
-
-
- /*/////////////////////////////MAIN
-/* Social Icons Styling */
-.social-icons {
-   margin-top: 20px;
-   display: flex;
-   justify-content: center;
-}
-
-.social-icons a {
-   color: #0A1A2D;
-   font-size: 24px;
-   margin: 0 10px;
-   transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-   color: #D6AF4C;
-   transform: scale(1.2);
-}
-
-/* Center Content Styling */
-.center-content {
-   text-align: center;
-}
-
-.avatar img {
-   width: 150px;
-   height: 150px;
-   border-radius: 50%;
-   border: 5px solid #D6AF4C;
-   margin-bottom: 20px;
-   animation: popIn 1.5s ease;
-}
-
-h1 {
-   font-size: 32px;
-   color: #0A1A2D;
-}
-h1 , p ,.social-icons {
-   padding: 9px;
-}
-.social-icons a{
-padding: 10px;
-}
-
-/* Text container for centering */
-.text-container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;                             
-}
-
-
-
-
-
-
-@keyframes popIn {
-   0% { transform: scale(0.5); opacity: 0; }
-   100% { transform: scale(1); opacity: 1; }
-}
-
-#sidebar.active {
-   left: 0;
-}
-.sidebar-avatar {
-   position: absolute;
-   top: 100px; 
-}
 
 
 
@@ -534,7 +485,7 @@ h1 {
 }
 .download-btn:hover {
    background-color: #0A1A2D;
-   box-shadow: 0 2px 10px #D6AF4C; 
+   box-shadow: 0 2px 10px #021935; 
    transform: scale(1.05); 
 }
 /* Responsive Styling */
@@ -646,8 +597,8 @@ h1 {
    color: #4c93d6;
 }
 /* Icon Color */
-.contact-item i.fa-square-whatsapp {
-   color: #25D366; 
+.contact-item i.fa-instagram{
+   color: #cd25d3; 
 }
 .contact-item i.fa-envelope {
    color: #D44638; 
@@ -677,41 +628,26 @@ h1 {
 }
 @media (max-width: 576px) {
    .contact-container {
-      padding: 20px; /* Adjust overall padding */
+      padding: 20px; 
    }
    .contact-container h2 {
-      font-size: 18px; /* Smaller font size for the heading */
-      margin-bottom: 10px; /* Reduce gap below the heading */
+      font-size: 18px; 
+      margin-bottom: 10px; 
    }
    .contact-info {
-      padding: 10px; /* Reduce padding around the contact list */
-      gap: 10px; /* Decrease gap between contact items */
+      padding: 10px; 
+      gap: 6px; 
    }
    .contact-item {
-      flex-direction: row; /* Ensure icons and text remain horizontal */
-      gap: 8px; /* Minimize space between icon and text */
-      font-size: 14px; /* Adjust font size */
-      padding: 8px; /* Tighten padding inside contact items */
+      flex-direction: row; 
+      gap: 2px; 
+      font-size: 14px; 
+      padding: 4px;
    }
    .contact-item i {
-      font-size: 16px; /* Reduce icon size */
+      font-size: 16px; 
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -743,7 +679,7 @@ h1 {
    width: 100px;
    height: 100px;
    border-radius: 50%;
-   border: 3px solid #D6AF4C;
+   border: 5px solid #D6AF4C;
    margin-bottom: 20px;
 }
 h1 {
@@ -868,105 +804,129 @@ h1 {
 body.dark-mode {
    color: #ffffff; 
 }
+
+
+/* General styling for dark mode */
+body {
+   transition: background-color 0.5s ease, color 0.5s ease;  /* Smooth transition for background and text color */
+}
+
+/* Dark mode background color */
+body.dark-mode {
+   background-color: #000307 !important;  /* Dark background for the whole page */
+   color: #ffffff !important;  /* Text color white */
+}
+
+/* Example of applying dark mode to a container */
+body.dark-mode .container {
+   background-color: #333 !important;
+   color: #ffffff !important;
+}
+
+/* Dark mode button or icon */
+body.dark-mode .mode-toggle {
+   color: #ffffff !important;
+}
+
+
+
 /* Sidebar for Dark Mode */
 body.dark-mode #sidebar {
-   background: #2b2b2b; 
+   background: #2b2b2b !important;  /* Added !important for better override */
 }
 body.dark-mode #sidebar a {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Ensuring the text color is always white */
 }
 body.dark-mode #sidebar a:hover {
-   color: #D6AF4C; 
+   color: #D6AF4C !important;  /* Ensure hover effect works */
 }
 body.dark-mode #sidebar li a {
-   color: #ffffff;
+   color: #ffffff !important;  /* Ensuring white text in sidebar */
 }
 body.dark-mode h1,
 body.dark-mode p {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Text color for headings and paragraphs */
 }
 body.dark-mode .hamburger {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Hamburger icon */
 }
 body.dark-mode .hamburger:hover {
-   color: #D6AF4C; 
+   color: #D6AF4C !important;  /* Hover color for hamburger */
 }
 body.dark-mode .resume-icon {
-   background-color: #D6AF4C;
-   color: #ffffff; 
+   background-color: #D6AF4C !important;
+   color: #ffffff !important;  /* Resume icon in dark mode */
 }
 body.dark-mode .resume-icon a {
-   color: #ffffff;
+   color: #ffffff !important;  /* Resume icon link */
 }
 body.dark-mode .top-right-icons .mode-toggle i {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Icon color for the mode toggle */
 }
+
 /* Dark Mode Text for Specific Sections */
 body.dark-mode .resume-icon a,
 body.dark-mode .social-icons a,
 body.dark-mode .sidebar a {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Social icon and sidebar links */
 }
 body.dark-mode .resume-icon a:hover,
 body.dark-mode .social-icons a:hover {
-   color: #D6AF4C;
-   color: white; 
+   color: #D6AF4C !important;  /* Hover effect for social and resume icon */
 }
+
 /*///////////////// Home page */
 body.dark-mode .hamburger,
 body.dark-mode .sidebar-avatar img,
 body.dark-mode .social-icons a {
-   color: #ffffff;
+   color: #ffffff !important;
 }
 body.dark-mode .social-icons a i {
-   color: #ffffff;
+   color: #ffffff !important;
 }
 body.dark-mode .social-icons a i:hover {
-   color: #D6AF4C; 
+   color: #D6AF4C !important;  /* Icon hover effect */
 }
 body.dark-mode .skills a,
 body.dark-mode .contact a {
-   color: #ffffff;
+   color: #ffffff !important;
 }
 body.dark-mode .skills a:hover,
 body.dark-mode .contact a:hover {
-   color: #D6AF4C;
+   color: #D6AF4C !important;  /* Hover effect for skills and contact links */
 }
 body.dark-mode .contact-container h1 {
-   color: #0a0a0a; 
+   color: #0a0a0a !important;  /* Heading color in contact container */
 }
+
 /* Dark Mode Styles for contact resume skills project Page */
 body.dark-mode {
-   background-color: #000307; 
-   color: #ffffff; 
+   background-color: #000307 !important;  /* Dark background for whole body */
+   color: #ffffff !important;  /* Default text color */
 }
 body.dark-mode .center-container,
 body.dark-mode .contact-container,
 body.dark-mode .project-card {
-   background-color: #333;
-   color: #ffffff;
+   background-color: #333 !important;  /* Dark background for these containers */
+   color: #ffffff !important;
 }
 body.dark-mode .center-container h1,
-body.dark-mode .contact-container h1  {
-   color: #D6AF4C; /
+body.dark-mode .contact-container h1 {
+   color: #D6AF4C !important;  /* Heading color in these sections */
 }
 body.dark-mode .resume-details p {
-   color: #ffffff; 
+   color: #ffffff !important;  /* Resume details text color */
 }
 body.dark-mode .download-btn {
-   background-color: #D6AF4C; 
-   color: #ffffff;
+   background-color: #D6AF4C !important;  /* Download button color */
+   color: #ffffff !important;
    border: none;
    padding: 10px 20px;
    text-decoration: none;
    border-radius: 5px;
    font-size: 16px;
 }
-body.dark-mode .download-btn:hover
-{
-   background-color: #B69234; 
+body.dark-mode .download-btn:hover {
+   background-color: #B69234 !important;  /* Hover color for download button */
+   box-shadow: 0 2px 10px #D6AF4C !important;  /* Hover shadow for download button */
 }
-
-
-
-

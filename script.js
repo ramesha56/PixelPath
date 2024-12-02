@@ -33,32 +33,31 @@ function toggleSidebar() {
 
 
 
-
 // Dark Mode Toggle Function
 function toggleDarkMode() {
+    // Toggle dark mode class on body
     document.body.classList.toggle("dark-mode");
 
     // Toggle between moon and sun icon
     const icon = document.querySelector(".mode-toggle i");
     if (document.body.classList.contains("dark-mode")) {
-        icon.classList.replace("fa-moon", "fa-sun");
-        localStorage.setItem("theme", "dark");
+        icon.classList.replace("fa-moon", "fa-sun");  // Change icon to sun when dark mode is active
+        localStorage.setItem("theme", "dark");        // Save dark mode preference in localStorage
     } else {
-        icon.classList.replace("fa-sun", "fa-moon");
-        localStorage.setItem("theme", "light");
+        icon.classList.replace("fa-sun", "fa-moon");  // Change icon to moon when light mode is active
+        localStorage.setItem("theme", "light");       // Save light mode preference in localStorage
     }
 }
 
 // Check for saved theme preference on page load
-window.onload = () => {
-    const theme = localStorage.getItem("theme");
+document.addEventListener("DOMContentLoaded", () => {
+    const theme = localStorage.getItem("theme");  // Get theme from localStorage
 
     if (theme === "dark") {
-        document.body.classList.add("dark-mode");
-        document.querySelector(".mode-toggle i").classList.replace("fa-moon", "fa-sun");
+        document.body.classList.add("dark-mode");  // Apply dark mode
+        document.querySelector(".mode-toggle i").classList.replace("fa-moon", "fa-sun"); // Change icon to sun
     } else {
-        document.body.classList.remove("dark-mode");
-        document.querySelector(".mode-toggle i").classList.replace("fa-sun", "fa-moon");
+        document.body.classList.remove("dark-mode");  // Apply light mode
+        document.querySelector(".mode-toggle i").classList.replace("fa-sun", "fa-moon"); // Change icon to moon
     }
-};
-
+});
